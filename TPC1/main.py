@@ -20,8 +20,8 @@ def read_file(file):
     with open(file, 'r') as f:
         f.readline() # first line
         for line in f:
-            line = line.split(',')
-            person = Person(int(line[0]), line[1], int(line[2]), int(line[3]), int(line[4]), True if line[5] == 1 else False)
+            line = line.rstrip().split(',')
+            person = Person(int(line[0]), line[1], int(line[2]), int(line[3]), int(line[4]), True if line[5] == "1" else False)
             data.append(person)
             if(person.idade > greater_age):
                 greater_age = person.idade
@@ -35,7 +35,7 @@ def read_file(file):
 def rate_doenca_sexo(data):
     total = len(data)
     masc, fem = 0, 0
-    masc, fem = list(filter(lambda x: x.sexo == 'M', data)), list(filter(lambda y: y.sexo == 'F', data))
+    masc, fem = list(filter(lambda x: x.sexo == 'M' and x.temDoenca, data)), list(filter(lambda y: y.sexo == 'F' and y.temDoenca, data))
     return {"Masculino": len(masc)/total, "Feminino": len(fem)/total}
 
 def rate_doenca_idade(data, limite_idade):
@@ -49,7 +49,7 @@ def rate_doenca_idade(data, limite_idade):
     for person in data:
         for age_range in age_ranges.keys():
             start, end = map(int, age_range[1:-1].split('-'))
-            if person.idade >= start and person.idade <= end:
+            if person.temDoenca and person.idade >= start and person.idade <= end:
                 age_ranges[age_range] += 1
                 break
 
@@ -66,7 +66,7 @@ def rate_doenca_colesterol(data, limite_sup_colesterol, limite_inf_colesterol):
     for person in data:
         for colesterol_range in colesterol_ranges.keys():
             start, end = map(int, colesterol_range[1:-1].split('-'))
-            if person.colesterol >= start and person.colesterol <= end:
+            if person.temDoenca and person.colesterol >= start and person.colesterol <= end:
                 colesterol_ranges[colesterol_range] += 1
                 break
     return colesterol_ranges
