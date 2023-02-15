@@ -1,13 +1,13 @@
 from math import inf
 
 class Person:
-    def __init__(self, idade, sexo, tensao, colesterol, batimento, temDoenca):
+    def __init__(self, idade, sexo, tensao, colesterol, batimento, tem_doenca):
         self.idade = idade
         self.sexo = sexo
         self.tensao = tensao
         self.colesterol = colesterol
         self.batimento = batimento
-        self.temDoenca = temDoenca
+        self.temDoenca = tem_doenca
 
     def __str__(self):
         return f"Idade: {self.idade}, Sexo: {self.sexo}, Tensao: {self.tensao}, Colesterol: {self.colesterol}, Batimento: {self.batimento}, Tem Doenca: {self.temDoenca}"
