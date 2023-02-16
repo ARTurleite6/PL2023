@@ -42,9 +42,9 @@ def rate_doenca_idade(data, limite_idade):
     min_age = 30
     max_age = limite_idade
     age_ranges = {}
-    age_array_size = 4
+    age_array_size = 5
     for age in range(min_age, max_age + 1, age_array_size):
-        age_ranges[f"[{age}-{age + age_array_size}]"] = 0
+        age_ranges[f"[{age}-{age + age_array_size - 1}]"] = 0
 
     for person in data:
         for age_range in age_ranges.keys():
@@ -58,10 +58,10 @@ def rate_doenca_idade(data, limite_idade):
 def rate_doenca_colesterol(data, limite_sup_colesterol, limite_inf_colesterol):
     min = limite_inf_colesterol
     max = limite_sup_colesterol
-    array_range_size = 10
+    array_range_size = 11
     colesterol_ranges = {}
-    for colesterol in range(min, max + 1, 10):
-        colesterol_ranges[f"[{colesterol}-{colesterol + array_range_size}]"] = 0
+    for colesterol in range(min, max + 1, array_range_size):
+        colesterol_ranges[f"[{colesterol}-{colesterol + array_range_size - 1}]"] = 0
 
     for person in data:
         for colesterol_range in colesterol_ranges.keys():
