@@ -1,0 +1,162 @@
+[
+{
+	"numero_processo": "575",
+	"data": "1894-11-08",
+	"nome": "Aarao Pereira Silva",
+	"pai": "Antonio Pereira Silva",
+	"mae": "Francisca Campos Silva",
+	"observacoes": "",
+}
+{
+	"numero_processo": "582",
+	"data": "1909-05-12",
+	"nome": "Abel Almeida",
+	"pai": "Antonio Manuel Almeida",
+	"mae": "Teresa Maria Sousa",
+	"observacoes": "",
+}
+{
+	"numero_processo": "569",
+	"data": "1867-05-23",
+	"nome": "Abel Alves Barroso",
+	"pai": "Antonio Alves Barroso",
+	"mae": "Maria Jose Alvares Barroso",
+	"observacoes": "Bento Alvares Barroso,Tio Paterno. Proc.32057.   Domingos Jose Alvares Barroso,Tio Materno. Proc.32235.",
+}
+{
+	"numero_processo": "576",
+	"data": "1896-11-28",
+	"nome": "Abel Augusto Oliveira",
+	"pai": "Francisco Jose Oliveira",
+	"mae": "Antonia Rosa Rebelo",
+	"observacoes": "Jose Antonio Oliveira,Irmao. Proc.5020.",
+}
+{
+	"numero_processo": "579",
+	"data": "1904-05-27",
+	"nome": "Abel Gomes Abreu Reis",
+	"pai": "Antonio Gomes Abreu",
+	"mae": "Ana Sequeira Reis",
+	"observacoes": "",
+}
+{
+	"numero_processo": "579",
+	"data": "1904-05-21",
+	"nome": "Abel Marques Reis",
+	"pai": "Jose Joaquim Marques Reis",
+	"mae": "Bernardina Dantas",
+	"observacoes": "",
+}
+{
+	"numero_processo": "578",
+	"data": "1901-11-12",
+	"nome": "Abel Martins Pereira",
+	"pai": "Serafim Martins Pereira",
+	"mae": "Emilia Goncalves",
+	"observacoes": "",
+}
+{
+	"numero_processo": "572",
+	"data": "1883-02-01",
+	"nome": "Abel Pedro Pereira Freitas",
+	"pai": "Joao Freitas Oliveira",
+	"mae": "Cecilia Rosa Pereira",
+	"observacoes": "",
+}
+{
+	"numero_processo": "578",
+	"data": "1900-08-30",
+	"nome": "Abel Silva Carvalho",
+	"pai": "Constantino Silva Rego",
+	"mae": "Margarida Rosa Carvalho",
+	"observacoes": "",
+}
+{
+	"numero_processo": "575",
+	"data": "1894-04-30",
+	"nome": "Abelardo Jose Cerqueira Araujo",
+	"pai": "Jose Maria Araujo",
+	"mae": "Leopoldina Cerqueira Ribeiro Araujo",
+	"observacoes": "",
+}
+{
+	"numero_processo": "575",
+	"data": "1894-04-30",
+	"nome": "Abelardo Jose Cerqueira Araujo",
+	"pai": "Jose Maria Araujo",
+	"mae": "Leopoldina Cerqueira Ribeiro Araujo",
+	"observacoes": "",
+}
+{
+	"numero_processo": "572",
+	"data": "1883-11-24",
+	"nome": "Abilio Acacio Conceicao Guerreiro",
+	"pai": "Jose Antonio Pereira Dantas Guerreiro",
+	"mae": "Maria Rita Pereira Monteiro",
+	"observacoes": "",
+}
+{
+	"numero_processo": "579",
+	"data": "1902-10-23",
+	"nome": "Abilio Aires Sousa Pereira Guimaraes",
+	"pai": "Joaquim Aires Sousa Pereira Guimaraes",
+	"mae": "Josefa Rosa Gomes",
+	"observacoes": "",
+}
+{
+	"numero_processo": "571",
+	"data": "1880-01-24",
+	"nome": "Abilio Antonio Alves",
+	"pai": "Joao Francisco Alves",
+	"mae": "Maria Jesus Rocha",
+	"observacoes": "",
+}
+{
+	"numero_processo": "573",
+	"data": "1889-12-03",
+	"nome": "Abilio Augusto Arantes",
+	"pai": "Sebastiao Arantes",
+	"mae": "Maria Sousa",
+	"observacoes": "",
+}
+{
+	"numero_processo": "581",
+	"data": "1908-08-11",
+	"nome": "Abilio Augusto Galvao",
+	"pai": "Antonio Augusto Galvao",
+	"mae": "Perpetua Duarte Galvao",
+	"observacoes": "",
+}
+{
+	"numero_processo": "581",
+	"data": "1908-05-20",
+	"nome": "Abilio Augusto Magalhaes",
+	"pai": "None",
+	"mae": "Maria Jesus Magalhaes",
+	"observacoes": "",
+}
+{
+	"numero_processo": "581",
+	"data": "1908-05-20",
+	"nome": "Abilio Augusto Magalhaes",
+	"pai": "None",
+	"mae": "Maria Jesus Magalhaes",
+	"observacoes": "",
+}
+{
+	"numero_processo": "581",
+	"data": "1908-05-20",
+	"nome": "Abilio Augusto Magalhaes",
+	"pai": "None",
+	"mae": "Maria Jesus Magalhaes",
+	"observacoes": "",
+}
+{
+	"numero_processo": "569",
+	"data": "1869-12-02",
+	"nome": "Abilio Augusto Santos",
+	"pai": "Jose Joaquim Santos",
+	"mae": "Teresa Jesus",
+	"observacoes": "Antonio Jose Adao,Tio Materno. Proc.12530.   Albino Antonio Ribeiro,Primo Paterno. Proc.12721.",
+}
+]
