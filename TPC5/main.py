@@ -12,11 +12,42 @@ abortar_regex = re.compile(r"ABORTAR")
 moedas_regex = re.compile(r"MOEDA\s+((\d+(?:c|e)(?:,\s*)?)*)")
 telefone_regex = re.compile(r"T=(\d{9}|00\d+)")
 
+def get_quantidade_moedas(saldo):
+    euros = saldo // 100
+    moedas_2_euros = euros // 2
+    moedas_1_euro = euros % 2
+    resultado = []
+
+    saldo %= 100
+    moedas_20_centimos = saldo // 20
+    resto = saldo % 20 
+    moedas_10_centimos = resto // 10
+    resto = resto % 10
+    moedas_5_centimos = resto // 5
+    moedas_1_centimo = resto % 5
+
+    if moedas_2_euros != 0:
+        resultado.append(f"{moedas_2_euros}x2e")
+    if moedas_1_euro != 0:
+        resultado.append(f"{moedas_1_euro}x1e")
+    if moedas_20_centimos != 0:
+        resultado.append(f"{moedas_20_centimos}x20c")
+    if moedas_10_centimos != 0:
+        resultado.append(f"{moedas_10_centimos}x10c")
+    if moedas_5_centimos != 0:
+        resultado.append(f"{moedas_5_centimos}x5c")
+    if moedas_1_centimo != 0:
+        resultado.append(f"{moedas_1_centimo}x1c")
+
+    print(resultado)
+
+    return ', '.join(resultado)
+
 def deal_with_moedas(operacao):
     lista_moedas = operacao.group(1)
     moedas = re.findall(r"(\d+(?:c|e))", lista_moedas)
 
-    regex_centimos = re.compile(r"(?P<value>5|10|20|50)c")
+    regex_centimos = re.compile(r"(?P<value>1|5|10|20|50)c")
     regex_euros = re.compile(r"(?P<value>1|2)e")
 
     print("Moedas:", moedas)
@@ -93,7 +124,7 @@ def main():
             print("Necessita levantar o auscultador primeiro")
 
     saldo_atual = 0
-    print("map: Introduza moedas.")
+    print("maq: Introduza moedas.")
     while not terminar:
         operacao = input()
         operacao_levantar = levantar_regex.match(operacao)
@@ -101,9 +132,7 @@ def main():
         operacao_telefonar = telefone_regex.match(operacao)
         operacao_abortar = abortar_regex.match(operacao)
         operacao_pousar = pousar_regex.match(operacao)
-        if re.match(pousar_regex, operacao):
-            terminar = True
-        elif operacao_moedas:
+        if operacao_moedas:
             resultado = deal_with_moedas(operacao_moedas)
             saldo_atual += resultado[0]
             print(get_message_moedas(saldo_atual, resultado[1]))
@@ -118,12 +147,11 @@ def main():
             except SaldoInsuficiente as e:
                 print("maq:", e)
         elif operacao_abortar:
-            euros, centimos = get_euros_centimos(saldo_atual)
-            print(f"maq: operação abortada; troco={euros}e{centimos}c; Volte sempre!")
+            print(f"maq: operação abortada; troco={get_quantidade_moedas(saldo_atual)}; Volte sempre!")
             terminar = True
         elif operacao_pousar:
-            euros, centimos = get_euros_centimos(saldo_atual)
-            print(f"maq: troco={euros}e{centimos}c; Volte sempre!")
+            print(f"maq: troco={get_quantidade_moedas(saldo_atual)}; Volte sempre!")
+            terminar = True
         elif operacao_levantar:
             print("Já está levantado")
 
