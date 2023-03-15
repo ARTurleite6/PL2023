@@ -39,7 +39,6 @@ def get_quantidade_moedas(saldo):
     if moedas_1_centimo != 0:
         resultado.append(f"{moedas_1_centimo}x1c")
 
-    print(resultado)
 
     return ', '.join(resultado)
 
@@ -50,7 +49,6 @@ def deal_with_moedas(operacao):
     regex_centimos = re.compile(r"(?P<value>1|5|10|20|50)c")
     regex_euros = re.compile(r"(?P<value>1|2)e")
 
-    print("Moedas:", moedas)
     saldo_total = 0
     moedas_invalidas = []
     for moeda in moedas:
@@ -59,13 +57,10 @@ def deal_with_moedas(operacao):
         if centimos:
             value = int(centimos.group("value"))
             saldo_total += value
-            print("Centimo:", value)
         elif euros:
             value = int(euros.group("value"))
             saldo_total += value * 100
-            print("Euros:", euros.group("value"))
         else:
-            print("Moeda inválida, moeda:", moeda)
             moedas_invalidas.append(moeda)
     return saldo_total, moedas_invalidas
 
