@@ -19,6 +19,8 @@ def get_quantidade_moedas(saldo):
     resultado = []
 
     saldo %= 100
+    moedas_50_centimos = saldo // 50
+    saldo %= 50
     moedas_20_centimos = saldo // 20
     resto = saldo % 20 
     moedas_10_centimos = resto // 10
@@ -30,6 +32,8 @@ def get_quantidade_moedas(saldo):
         resultado.append(f"{moedas_2_euros}x2e")
     if moedas_1_euro != 0:
         resultado.append(f"{moedas_1_euro}x1e")
+    if moedas_50_centimos != 0:
+        resultado.append(f"{moedas_50_centimos}x50c")
     if moedas_20_centimos != 0:
         resultado.append(f"{moedas_20_centimos}x20c")
     if moedas_10_centimos != 0:
